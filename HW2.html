@@ -206,10 +206,20 @@
         }
 
         .item {
-            width: 480px;
+            width: 480px;          
             margin: 10px;
             box-sizing: border-box;
-            text-align: center;
+            text-align: center;                 
+        }
+        .item_pic1{
+            background-image: url("圖片/assets/asset 12.png");
+            background-size: cover;    
+        }          
+        .item_pic1 img{
+            width: 100%;
+        }
+        .item_pic1 img:hover {
+            opacity: 0;
         }
 
         .item img {
@@ -229,13 +239,8 @@
         .item span {
             font-size: 10px;
         }
-
-        .item:hover {
-            opacity: 0.5;
-        }
-
         .products {
-            background-image: url(圖片/assets/asset\ 43.png);
+            background-image: url("圖片/assets/asset 43.png");
             background-size: cover;
             margin-top: 100px;
         }
@@ -405,7 +410,6 @@
             padding-top: 15px;
             margin: 10px;
         }
-        .P{}
 
         .footer_copyright p {
             color: rgba(128, 128, 128, 0.712);
@@ -417,7 +421,6 @@
             font-size: 10px;
             margin: 0 5px;
         }
-
     </style>
 </head>
 
@@ -513,19 +516,25 @@
             <h2>Staff.Pick</h2>
         </div>
         <div class="item">
-            <img src="圖片/assets/asset 11.png">
+            <div class="item_pic1">
+                <img src="圖片/assets/asset 11.png">
+            </div>
             <p>Sapien Libero</p>
             <h4>$150.00</h4>
         </div>
         <div class="item">
-            <img src="圖片/assets/asset 13.png">
+            <div class="item_pic2">
+                <img src="圖片/assets/asset 13.png">
+            </div>
             <p>Fringilla Augue 360</p>
             <h4>
                 <span>$200.00</span>
                 $150.00
         </div>
         <div class="item">
-            <img src="圖片/assets/asset 15.png">
+            <div class="item_pic3">
+                <img src="圖片/assets/asset 15.png">
+            </div>
             <p>Faded Short Sleeves Variable</p>
             <h4>
                 <span>$200.00</span>
@@ -533,22 +542,30 @@
             </h4>
         </div>
         <div class="item">
-            <img src="圖片/assets/asset 17.png">
+            <div class="item_pic4">
+                <img src="圖片/assets/asset 17.png">
+            </div>
             <p>Purple Flowers</p>
             <h4>$180.00</h4>
         </div>
         <div class="item">
-            <img src="圖片/assets/asset 19.png">
+            <div class="item_pic5">
+                <img src="圖片/assets/asset 19.png">
+            </div>
             <p>Adipiscing Cursus Out Of Stock</p>
             <h4>$450.00</h4>
         </div>
         <div class="item">
-            <img src="圖片/assets/asset 21.png">
+            <div class="item_pic6">
+                <img src="圖片/assets/asset 21.png">
+            </div>
             <p>Frongilla Augue</p>
             <h4>$320.00</h4>
         </div>
         <div class="item">
-            <img src="圖片/assets/asset 23.png">
+            <div class="item_pic7">
+                <img src="圖片/assets/asset 23.png">
+            </div>
             <p>Purple Flowers</p>
             <h4>
                 <span>$200.00</span>
@@ -556,7 +573,9 @@
             </h4>
         </div>
         <div class="item">
-            <img src="圖片/assets/asset 25.png">
+            <div class="item_pic8">
+                <img src="圖片/assets/asset 25.png">
+            </div>
             <p>Plant</p>
             <h4>
                 <span>$200.00</span>
@@ -564,7 +583,9 @@
             </h4>
         </div>
         <div class="item">
-            <img src="圖片/assets/asset 27.png">
+            <div class="item_pic9">
+                <img src="圖片/assets/asset 27.png">
+            </div>
             <p>Plant Beautiful</p>
             <h4>$150.00</h4>
         </div>
@@ -620,7 +641,7 @@
             </div>
             <div class="footer_aboutus">
                 <a href="#" style="text-decoration:none;">ABOUT US</a>
-                <a href="#" style="text-decoration:none;">一  CUSTOMER SERVICE  一</a>
+                <a href="#" style="text-decoration:none;">一 CUSTOMER SERVICE 一</a>
                 <a href="#" style="text-decoration:none;">SUBSCRIPTION</a>
             </div>
             <div class="footer_icon">
