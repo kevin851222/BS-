@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBYOTA TAIWAN</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .wrap {
+            width: 100%;           
+        }
+
+        .container {
+            width: 900px;
+            margin: auto;
+        }
+
+        .item {
+            width: 800px;
+            height: 600px;
+        }
+
+        .box {
+            width: 350px;
+            height: 250px;
+            background-color: #eeeeee;
+            position: relative;
+            left: 500px;
+            top: 120px;
+            z-index: -2;
+        }
+        .video{
+            width: 500px;
+            height: 300px;
+            position: relative;
+            top: -350px;
+            left: 250px;
+            z-index: -1;
+        }
+        .video img{
+            width: 100%;
+        }
+        .info {
+            width: 350px;
+            height: 300px;
+            flex-wrap: wrap;
+            position: relative;
+            top: -150px;
+            left: 0px;
+            z-index: 2;
+        }
+        .info_title{
+            width: 100%;
+            height: 100px;
+            background-color: rgb(177, 3, 3);
+            display: flex;
+        
+        }
+        .info_txt{
+            width: 100%;
+            height: 200px;
+            background-color: black;
+        }
+        .info_title h2{
+            color: white;
+            margin: auto 0px;
+            font-size: 50px;
+        }
+        .info_title h5{
+            color: white;
+            writing-mode: vertical-lr;
+            font-size: 90px;
+            font-family: Arial, Helvetica, sans-serif;           
+        }
+        .info_txt h3{
+            color: white;
+            padding: 20px 0 10px 20px;           
+        }
+        .info_txt p{
+            color: white;  
+            padding: 0 30px 0 20px;
+            font-size: 18px;         
+        }
+        .advantage{
+            width: 500px;
+            background-color: #e9e6e6;
+            padding: 15px;
+            position: relative;
+            top: -360px;
+            right: -100px;
+            z-index: 1;
+        }
+        .advantage p{
+            font-size: 10px;
+            margin: 5px 0;
+        }
+        
+        .advantage h4{
+            display: inline-block;
+            padding: 2px 5px;
+            color: rgb(192, 192, 192);
+            background-color: black;
+            border-radius: 3px;
+        }
+        .advantage h5{
+            color: rgb(165, 0, 0);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .advantage h5::after{
+            content: "";
+            width: 70%;
+            height: 2px;
+            display: inline-block;
+            background-color: #ae0014;
+            position: relative;
+            top: -3px;
+            right: -6px;
+        }
+        .item2 .info{
+            position: relative;            
+            left: 500px;
+        }
+        .item2 .video{
+            position: relative;
+            left: 50px;
+        }
+        .item2 .advantage{
+            position: relative;
+            left: 310px;
+        }
+        .item2 .box{
+            position: relative;
+            left: 250px;
+            top: 160px;
+            
+        }
+        .item2 .info h5{
+            margin: auto;
+        }
+        .item .info h2{
+            margin-left: 20px;
+        }
+        .item2 .info_txt{
+            height: 170px;
+        }
+        .item2{
+            height: 520px;
+        }
+        .item3 .box{
+            position: relative;
+            top: 140px;
+            left: 450px;
+        }
+        .item3{
+            margin-bottom: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="container">
+            <div class="item">
+                <div class="box">
+                </div>
+                <div class="info">
+                    <div class="info_title">
+                        <h5>01</h5>
+                        <h2>操控樂趣</h2>
+                    </div>
+                    <div class="info_txt">
+                        <h3>人人滿意的駕駛體驗</h3>
+                        <p>
+                            透過最佳重量分配，實現平順起步、直線穩定加速，過彎同時保持車身平穩，帶給駕駛更靈敏的道路反饋，享受隨心馳騁的行駛快感。
+                        </p>
+                    </div>
+                </div>
+                <div class="video">
+                    <img src="圖片/car.png">
+                </div>
+                <div class="advantage">
+                    <h5>因為我們做了這些革新</h5>
+                    <h4>低重心設計</h4>
+                    <p>透過低重心設計，不僅呈現更低伏的外觀，更能減少車身側傾，保持高速行駛穩定性。</p>
+                    <h4>車體剛性強化</h4>
+                    <p>車身結構採用超高強度鋼材，提高車輛穩定性，同時藉由雷射強化焊接技術，大幅增加焊點數量，提升車身抗扭剛性，強化駕駛穩定性及安全性。</p>
+                    <h4>四輪獨立懸吊</h4>
+                    <p>搭載全新四輪獨立懸吊設定，透過懸吊的高承載強度，保持輪胎抓地力，<br>靈敏度與清晰路感回饋，提升駕馭樂趣。</p>
+                </div>
+            </div>
+            <div class="item item2">
+                <div class="box">
+                </div>
+                <div class="info">
+                    <div class="info_title">                        
+                        <h2>安全守護</h2>
+                        <h5>02</h5>
+                    </div>
+                    <div class="info_txt">
+                        <h3>行車更安心的高剛性車體</h3>
+                        <p>
+                            您的愛車會妥善保護您，強悍穩固的車身可使您安全無慮。世界級的安全功能讓您輕鬆自如享受旅程、毫無後顧之憂。
+                        </p>
+                    </div>
+                </div>
+                <div class="video">
+                    <img src="圖片/car2.png">
+                </div>
+                <div class="advantage">
+                    <h5>因為我們做了這些革新</h5>
+                    <h4>主動安全</h4>
+                    <p>以先進的TSS系統，主動偵測路況，輔助駕駛判斷路況並維持行車安全。</p>
+                    <h4>被動安全</h4>
+                    <p>強壯的高剛性車體，使用熱沖壓材料的高強度抗扭鋼板，強化座艙對意外事故的保護力。</p>                    
+                </div>
+            </div>
+            <div class="item item3">
+                <div class="box">
+                </div>
+                <div class="info">
+                    <div class="info_title">
+                        <h5>03</h5>
+                        <h2>乘坐舒適</h2>
+                    </div>
+                    <div class="info_txt">
+                        <h3>令人放鬆舒適的車室空間</h3>
+                        <p>
+                            車室空間設計著重人體工學，透過方向盤、塔板等位置優化，追求更舒適的駕駛位置，並以新型座椅設計，提高座椅包覆性，致力實現長途駕駛不疲勞的書是駕馭體驗。
+                        </p>
+                    </div>
+                </div>
+                <div class="video">
+                    <img src="圖片/car3.png">
+                </div>
+                <div class="advantage">
+                    <h5>因為我們做了這些革新</h5>
+                    <h4>駕駛位置最佳化</h4>
+                    <p>針對駕駛位置進行徹底的修改，讓駕馭者可如同握手般自然且舒適地操控方向盤。。</p>
+                    <h4>駕馭視野佳</h4>
+                    <p>考量駕駛坐進車內的高度，透過前擋風玻璃位置的調整，達到盲區極小化，使駕駛視野更開闊，同步提升駕馭安全。</p>
+                    <h4>更寧靜的車室</h4>
+                    <p>採用最新三層結構的隔音材料，與引擎、變速箱的零件改革，將座艙的震動抑制在最小限度，提供乘客最舒適安靜的感受。</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+
+</html>
