@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+        }
+
+        .wrap {
+            margin: auto;
+            margin-top: 100px;
+        }
+
+        .body {
+            margin: 0px;
+        }
+
+        .calendar {
+            width: 1200px;
+            background: #fff;
+
+            margin: 0px auto;
+        }
+
+        .body-list ul {
+            display: flex;
+            flex-direction: row;
+            margin: 0px;
+            width: 100%;
+        }
+
+        .lightgrey li {
+            width: 14.28%;
+            list-style: none;
+            display: flex;
+            box-sizing: border-box;
+            ;
+            font-size: 30px;
+            border: 1px solid gray;
+
+        }
+
+        .lightgrey p {
+
+            margin: auto;
+        }
+
+        .darkgrey li {
+            width: 14.28%;
+            height: 100px;
+            list-style: none;
+            box-sizing: border-box;
+            border: 1px solid gray;
+        }
+
+        .title {
+            position: relative;
+            height: 70px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .title a {
+            text-decoration: none;
+            font-size: 25px;
+        }
+
+        #prev {
+            position: absolute;
+            top: 5px;
+            left: 300px;
+        }
+
+        #next {
+            position: absolute;
+            top: 5px;
+            right: 300px;
+        }
+        
+        #nextYear {
+            position: absolute;
+            top: 5px;
+            right: 100px;
+        }
+
+        #prevYear {
+            position: absolute;
+            top: 5px;
+            left: 100px;
+        }
+
+        #days {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        #days .today {
+            background-color: rgb(166, 166, 240);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="calendar">
+            <div class="title">
+                <h1 class="green" id="calendar-title"></h1>
+                <a href="" id="prev"> < 上個月 </a>
+                <a href="" id="next">下個月 ></a>
+                <a href="" id="prevYear"> < 上一年 </a>
+                <a href="" id="nextYear">下一年 ></a>
+            </div>
+            <div class="body">
+                <div class="lightgrey body-list">
+                    <ul class="ppp">
+                        <li>
+                            <p>日</p>
+                        </li>
+                        <li>
+                            <p>一</p>
+                        </li>
+                        <li>
+                            <p>二</p>
+                        </li>
+                        <li>
+                            <p>三</p>
+                        </li>
+                        <li>
+                            <p>四</p>
+                        </li>
+                        <li>
+                            <p>五</p>
+                        </li>
+                        <li>
+                            <p>六</p>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="darkgrey body-list">
+                <ul id="days">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        var month_olympic = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        var month_normal = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        var month_name = ["January", "Feburary", "March", "April", "May", "June", "July", "Auguest", "September", "October", "November", "December"];
+        var _days = document.getElementById("days");
+        var _month = document.getElementById('calendar-title');
+        var my_date = new Date();
+        var my_year = my_date.getFullYear();
+        var my_month = my_date.getMonth();
+        var my_day = my_date.getDate();
+
+        function dayStart(month, year) {
+            var tmpDate = new Date(year, month, 1);
+            return (tmpDate.getDay());
+        }
+
+        function daysMonth(month, year) {
+            var tmp = year % 4;
+            if (tmp == 0) {
+                return (month_olympic[month]);
+            } else {
+                return (month_normal[month]);
+            }
+        }
+
+        function getDate() {
+            var totalDay = daysMonth(my_month, my_year);
+            var firstDay = dayStart(my_month, my_year);
+            var str = "";
+            let i;
+            let num1 = 1;
+            let lastMonth;
+
+            if (my_month == 0) {
+                let z = 32 - firstDay;
+                for (i = 1; i < firstDay + 1; i++) {
+                    str += "<li>" + z + "</li>";
+                    z++;
+                }
+            }
+            else {
+                lastMonth = daysMonth(my_month - 1, my_year);
+                let z = lastMonth + 1 - firstDay;
+                for (i = 1; i < firstDay + 1; i++) {
+                    str += "<li>" + z + "</li>";
+                    z++;
+                }
+            }
+
+            for (let j = 1; j < totalDay + 1; j++) {
+                if (j == my_day && my_year == my_date.getFullYear() && my_month == my_date.getMonth()) {
+                    str += "<li class = today>" + j + "</li>";
+                }
+                else {
+                    str += "<li>" + j + "</li>";
+                }
+            }
+
+            if (i + totalDay > 36) {
+                for (let x = totalDay + i; x < 43; x++) {
+
+                    str += "<li>" + num1 + "</li>";
+                    num1++;
+                }
+            }
+            else {
+                for (let x = totalDay + i; x < 36; x++) {
+
+                    str += "<li>" + num1 + "</li>";
+                    num1++;
+                }
+            }
+
+            _days.innerHTML = str;
+            _month.innerHTML = month_name[my_month] + my_year
+        }
+        getDate()
+
+        prev.onclick = function (e) {
+            e.preventDefault();
+            my_month--;
+            if (my_month < 0) {
+                my_year--;
+                my_month = 11;
+            }
+            getDate();
+        }
+        next.onclick = function (e) {
+            e.preventDefault();
+            my_month++;
+            if (my_month > 11) {
+                my_year++;
+                my_month = 0;
+            }
+            getDate();
+        }
+        nextYear.onclick = function (e) {
+            e.preventDefault();
+            my_year++;
+            getDate();
+        }
+        prevYear.onclick = function (e) {
+            e.preventDefault();
+            my_year--;
+            getDate();
+        }
+    </script>
+</body>
+
+</html>
