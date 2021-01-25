@@ -8,21 +8,24 @@
     <link rel="stylesheet" href="/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <style>
-        .container{
+        .body {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .container {
             width: 100%;
         }
+
         .header {
             display: flex;
             margin-top: 15px;
         }
 
-        .header_logo {
-            margin-right: 200px;
-        }
-
-        .header_logo img {
-            width: 100%;
+        .header_step {
+            margin: auto;
         }
 
         .header_step_icon {
@@ -41,8 +44,8 @@
         }
 
         .header_step_icon_num {
-            width: 1.3rem;
-            height: 1.3rem;
+            width: 2rem;
+            height: 2rem;
             border-radius: 50%;
             background-color: black;
             justify-content: center;
@@ -54,47 +57,178 @@
             color: white;
             padding: 5px;
             vertical-align: baseline;
+            font-size: 20px;
         }
 
         .header_step_line {
-            width: 150px;
+            width: 100px;
             margin: 0 .5rem;
             border-top: 1px solid black;
             position: relative;
-            top: 10px;
+            top: 15px;
         }
 
         .num3 {
             background-color: rgb(151, 148, 148);
         }
 
-        .header_step_txt_words span{
+        .header_step_txt_words span {
             color: rgb(151, 148, 148);
         }
-        .cart_title{
-            height: 215px;
-            border: 1px solid  rgb(175, 169, 169);
+
+        .cart_title {
             padding: .5rem 1rem;
-            margin-top: 1.5rem;
         }
 
-        .step2{
+        .step2 {
             width: 100%;
         }
-        .cart_titles{
+
+        .cart_titles {
             border-bottom: 1px dashed black;
         }
 
-        .commodity_discount{
+        .commodity_discount_txt {
             display: flex;
         }
 
-        .commodity_total{
-            display: flex;
-        }
-
-        .delivery_option{
+        .delivery_option {
             margin: auto;
+            border: 1px solid rgb(175, 169, 169);
+        }
+
+        .delivery_option_fee {
+            margin: 0px 0px 30px 40px;
+        }
+
+        .delivery_option_7-11 {
+            margin: 0px 40px 10px 20px;
+            background-color: #F4F4F4;
+            padding: 10px 0px 10px 20px;
+        }
+
+        .delivery_option_OK {
+            margin: 0px 40px 10px 20px;
+            background-color: #F4F4F4;
+            padding: 10px 0px 10px 20px;
+        }
+
+        .delivery_option_delivery {
+            margin: 0px 40px 10px 20px;
+            background-color: #F4F4F4;
+            padding: 10px 0px 10px 20px;
+        }
+
+        .delivery_option_storePickup {
+            margin: 0px 40px 10px 20px;
+            background-color: #F4F4F4;
+            padding: 10px 0px 10px 20px;
+        }
+
+        .delivery_option_fee p {
+            color: #536ABD;
+            font-size: 15px;
+        }
+
+        .recipient_profile {
+            border: 1px solid rgb(175, 169, 169);
+            margin-top: 25px;
+        }
+
+        .recipient_profile_name {
+            display: flex;
+            margin: 10px 0px 20px 61px;
+        }
+
+        .recipient_profile_phone {
+            display: flex;
+            margin: 10px 0px 20px 30px;
+        }
+
+        .recipient_profile_homePhone {
+            display: flex;
+            margin: 10px 0px 20px 30px;
+        }
+
+        .recipient_profile_address {
+            display: flex;
+            margin: 10px 0px 20px 62px;
+        }
+
+        .recipient_profile_name p {
+            margin: 3px 10px 0px 0px;
+        }
+
+        .recipient_profile_phone p {
+            margin: 3px 10px 0px 0px;
+        }
+
+        .recipient_profile_homePhone p {
+            margin: 3px 10px 0px 0px;
+        }
+
+        .recipient_profile_address p {
+            margin: 3px 10px 0px 0px;
+        }
+
+        .subscriber_profile {
+            border: 1px solid rgb(175, 169, 169);
+            margin-top: 25px;
+        }
+
+        .payment_options {
+            border: 1px solid rgb(175, 169, 169);
+            margin-top: 25px;
+        }
+
+        .invoice_profile {
+            border: 1px solid rgb(175, 169, 169);
+            margin-top: 25px;
+        }
+
+        .invoice_profile_txt {
+            padding: 10px 30px;
+        }
+
+        .invoice_profile_txt p {
+            color: #A82130;
+        }
+
+        .invoice_profile_select {
+            margin: 0px 0px 40px 50px;
+        }
+
+        .commodity_discount_txt span {
+            color: red
+        }
+
+        .commodity_total_txt {
+            display: flex;
+        }
+
+        .commodity_total_txt p{
+            margin-left: 90px;
+        }
+        
+        .commodity_total_txt span{
+            margin:-15px 5px 0px 5px;
+            color: red;
+            font-size: 35px;
+        }
+
+        .commodity_total_txt button{
+            background-color: #a82130;
+            color: white;
+            margin-top: -10px;
+            margin-bottom: 5px;
+            width: 120px;
+            height: 40px;
+            border-radius: 4px;
+            border-color:#a82130;
+        }
+
+        .commodity{
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -102,9 +236,6 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="header_logo">
-                <img src="https://picsum.photos/200/50/?random=1">
-            </div>
             <div class="header_step">
                 <div class="header_step_icon">
                     <div class="header_step_icon_num">
@@ -141,7 +272,21 @@
                     </div>
                 </div>
                 <div class="delivery_option_body">
-
+                    <div class="delivery_option_fee">
+                        <p>超商取貨未滿350元，酌收訂單處理費50元</p>
+                    </div>
+                    <div class="delivery_option_7-11">
+                        <input type="radio" checked="checked" name="radio" class="input_radio"> 台灣7-ELEVEN取貨
+                    </div>
+                    <div class="delivery_option_OK">
+                        <input type="radio" checked="checked" name="radio" class="input_radio"> 台灣全家/ OK /萊爾富取貨
+                    </div>
+                    <div class="delivery_option_delivery">
+                        <input type="radio" checked="checked" name="radio" class="input_radio"> 台灣-宅配(台灣地區)
+                    </div>
+                    <div class="delivery_option_storePickup">
+                        <input type="radio" checked="checked" name="radio" class="input_radio"> 誠品門市取貨
+                    </div>
                 </div>
             </div>
             <!-- 收件人資料 -->
@@ -151,7 +296,24 @@
                         <p>收件人資料</p>
                     </div>
                 </div>
-                <div class="recipient_profile_body"></div>
+                <div class="recipient_profile_body">
+                    <div class="recipient_profile_name">
+                        <p>姓名</p>
+                        <input type="text" placeholder="姓名">
+                    </div>
+                    <div class="recipient_profile_phone">
+                        <p>行動電話</p>
+                        <input type="tel" placeholder="號碼">
+                    </div>
+                    <div class="recipient_profile_homePhone">
+                        <p>連絡電話</p>
+                        <input type="tel" placeholder="市話">
+                    </div>
+                    <div class="recipient_profile_address">
+                        <p>地址</p>
+                        <input type="text" placeholder="詳細地址">
+                    </div>
+                </div>
             </div>
             <!-- 訂購人資料 -->
             <div class="subscriber_profile">
@@ -160,7 +322,24 @@
                         <p>訂購人資料</p>
                     </div>
                 </div>
-                <div class="subscriber_profile_body"></div>
+                <div class="subscriber_profile_body">
+                    <div class="recipient_profile_name">
+                        <p>姓名</p>
+                        <input type="text" placeholder="姓名">
+                    </div>
+                    <div class="recipient_profile_phone">
+                        <p>行動電話</p>
+                        <input type="tel" placeholder="號碼">
+                    </div>
+                    <div class="recipient_profile_homePhone">
+                        <p>連絡電話</p>
+                        <input type="tel" placeholder="市話">
+                    </div>
+                    <div class="recipient_profile_address">
+                        <p>地址</p>
+                        <input type="text" placeholder="詳細地址">
+                    </div>
+                </div>
             </div>
             <!-- 付款方式 -->
             <div class="payment_options">
@@ -169,7 +348,20 @@
                         <p>付款方式</p>
                     </div>
                 </div>
-                <div class="payment_options_body"></div>
+                <div class="payment_options_body">
+                    <div class="delivery_option_7-11">
+                        <input type="radio" checked="checked" name="radio" class="input_radio"> 台灣7-ELEVEN取貨付款
+                    </div>
+                    <div class="delivery_option_OK">
+                        <input type="radio" checked="checked" name="radio" class="input_radio"> ATM轉帳付款
+                    </div>
+                    <div class="delivery_option_delivery">
+                        <input type="radio" checked="checked" name="radio" class="input_radio"> 綠界
+                    </div>
+                    <div class="delivery_option_storePickup">
+                        <input type="radio" checked="checked" name="radio" class="input_radio"> 誠品點折扣
+                    </div>
+                </div>
             </div>
             <!-- 發票資訊 -->
             <div class="invoice_profile">
@@ -178,40 +370,51 @@
                         <p>發票資訊</p>
                     </div>
                 </div>
-                <div class="invoice_profile_body"></div>
+                <div class="invoice_profile_body">
+                    <div class="invoice_profile_txt">
+                        <p>※ 您的發票預設為電子發票託管，若中獎我們將於月底發出E-mail通知並以掛號方式把中獎發票寄給您</p>
+                    </div>
+                    <div class="invoice_profile_select">
+                        <select>
+                            <option>二聯式電子發票(存入會員帳號)</option>
+                            <option>二聯式電子發票(手機條碼載具)</option>
+                            <option>二聯式電子發票(自然人憑證載具)</option>
+                            <option>二聯式電子發票(紙本證明聯))</option>
+                            <option>三聯式電子發票</option>
+                            <option>發票捐贈</option>
+                        </select>
+                    </div>
+                </div>
             </div>
             <!-- 購物車明細 -->
 
             <div class="cart_details">
-                <div class="cart_title">
-                    <div class="cart_details_title cart_titles">
-                        <p>購物車明細</p>
-                    </div>
-                </div>
+
             </div>
             <!-- 商品折扣 -->
-            <div class="commodity_discount">
-                <div class="commodity_discount_txt">
-                    <p>商品小計</p>
-                    <span>$300</span>
-                    <span>-</span>
-                    <p>優惠活動</p>
-                    <span>$0</span>
-                    <span>-</span>
-                    <p>優惠券</p>
-                    <span>$0</span>
-                    <span>+</span>
-                    <p>訂單處理費</p>
-                    <span>$50</span>
+            <div class="commodity">
+                <div class="commodity_discount">
+                    <div class="commodity_discount_txt">
+                        <p>商品小計</p>
+                        <span>$300</span>
+                        <span>-</span>
+                        <p>優惠活動</p>
+                        <span>$0</span>
+                        <span>-</span>
+                        <p>優惠券</p>
+                        <span>$0</span>
+                        <span>+</span>
+                        <p>訂單處理費</p>
+                        <span>$50</span>
+                    </div>
                 </div>
-            </div>
-            <!-- 商品總計 -->
-            <div class="commodity_total">
-                <div class="commodity_total_txt">
-                    <p>商品總金額</p>
-                    <span>$350</span>
-                    <button>返回前頁</button>
-                    <button>確認結帳</button>
+                <!-- 商品總計 -->
+                <div class="commodity_total">
+                    <div class="commodity_total_txt">
+                        <p>商品總金額</p>
+                        <span>$350</span>
+                        <button>確認結帳</button>
+                    </div>
                 </div>
             </div>
         </div>
