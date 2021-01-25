@@ -71,6 +71,15 @@
             getCard();
         });
 
+        function getPokemonJSON() {
+            let xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+                pokemonArray = JSON.parse(this.responseText);
+                TransformData(pokemonArray);
+            }
+            xhr.open("GET", "https://raw.githubusercontent.com/apprunner/pokemon.json/master/pokedex.json");
+            xhr.send();
+        }
 
         function TransformData(dataArray) {
             dataArray.forEach(item => {
@@ -88,15 +97,7 @@
             });
         };
 
-        function getPokemonJSON() {
-            let xhr = new XMLHttpRequest();
-            xhr.onload = function () {
-                pokemonArray = JSON.parse(this.responseText);
-                TransformData(pokemonArray);
-            }
-            xhr.open("GET", "https://raw.githubusercontent.com/apprunner/pokemon.json/master/pokedex.json");
-            xhr.send();
-        }
+
 
         function getCard() {
             let cardPokemon = document.querySelector("#cardPokemon");
