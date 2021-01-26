@@ -107,13 +107,7 @@
             padding: 10px 0px 0px 20px;
         }
 
-        .option_hover label{
-            padding-right: 80px;
-            padding-bottom: 15px;
-            padding-top: 15px;
-        }
-
-        .option_hover:hover{
+        .option_hover:hover {
             background-color: #8b8076;
         }
 
@@ -217,17 +211,17 @@
             display: flex;
         }
 
-        .commodity_total_txt p{
+        .commodity_total_txt p {
             margin-left: 90px;
         }
-        
-        .commodity_total_txt span{
-            margin:-15px 5px 0px 5px;
+
+        .commodity_total_txt span {
+            margin: -15px 5px 0px 5px;
             color: red;
             font-size: 35px;
         }
 
-        .commodity_total_txt button{
+        .commodity_total_txt button {
             background-color: #a82130;
             color: white;
             margin-top: -10px;
@@ -235,11 +229,59 @@
             width: 120px;
             height: 40px;
             border-radius: 4px;
-            border-color:#a82130;
+            border-color: #a82130;
         }
 
-        .commodity{
-            margin-top: 20px;
+        .commodity {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            box-shadow: 0 10px 10px 5px #000;
+            background-color: white;
+            padding-left: 10px;
+            padding-top: 10px;
+        }
+
+        .option_hover label {
+            padding-bottom: 15px;
+            padding-top: 15px;
+        }
+
+        .delivery_option_7-11 label {
+            padding-right: 150px;
+        }
+
+        .delivery_option_OK label {
+            padding-right: 90px;
+        }
+
+        .delivery_option_delivery label {
+            padding-right: 140px;
+        }
+
+        .delivery_option_storePickup label {
+            padding-right: 180px;
+        }
+
+        .delivery_options_7-11 label {
+            padding-right: 110px;
+        }
+
+        .delivery_options_OK label {
+            padding-right: 180px;
+        }
+
+        .delivery_options_delivery label {
+            padding-right: 250px;
+        }
+
+        .delivery_options_storePickup label {
+            padding-right: 200px;
+        }
+
+        .cart_details {
+            margin-bottom: 100px;
         }
     </style>
 </head>
@@ -287,16 +329,20 @@
                         <p>超商取貨未滿350元，酌收訂單處理費50元</p>
                     </div>
                     <div class="delivery_option_7-11 option_hover">
-                        <input type="radio" checked="checked" name="radio" class="input_radio" id="radio1"/> <label for="radio1">台灣7-ELEVEN取貨</label>
+                        <input type="radio" checked="checked" name="radio" class="input_radio" id="radio1" /> <label
+                            for="radio1">台灣7-ELEVEN取貨</label>
                     </div>
                     <div class="delivery_option_OK option_hover">
-                        <input type="radio" checked="checked" name="radio" class="input_radio" id="radio2"/> <label for="radio2">台灣全家/ OK /萊爾富取貨</label>
+                        <input type="radio" checked="checked" name="radio" class="input_radio" id="radio2" /> <label
+                            for="radio2">台灣全家/ OK /萊爾富取貨</label>
                     </div>
                     <div class="delivery_option_delivery option_hover">
-                        <input type="radio" checked="checked" name="radio" class="input_radio" id="radio3"/> <label for="radio3">台灣-宅配(台灣地區)</label>
+                        <input type="radio" checked="checked" name="radio" class="input_radio" id="radio3" /> <label
+                            for="radio3">台灣-宅配(台灣地區)</label>
                     </div>
                     <div class="delivery_option_storePickup option_hover">
-                        <input type="radio" checked="checked" name="radio" class="input_radio" id="radio4"/> <label for="radio4">誠品門市取貨</label>
+                        <input type="radio" checked="checked" name="radio" class="input_radio" id="radio4" /> <label
+                            for="radio4">誠品門市取貨</label>
                     </div>
                 </div>
             </div>
@@ -360,17 +406,21 @@
                     </div>
                 </div>
                 <div class="payment_options_body">
-                    <div class="delivery_option_7-11 option_hover">
-                        <input type="radio" checked="checked" name="radio1" class="input_radio" id="radio5"/> <label for="radio5"> 台灣7-ELEVEN取貨付款</label>
+                    <div class="delivery_option_7-11 option_hover delivery_options_7-11">
+                        <input type="radio" checked="checked" name="radio1" class="input_radio" id="radio5" /> <label
+                            for="radio5"> 台灣7-ELEVEN取貨付款</label>
                     </div>
-                    <div class="delivery_option_OK option_hover">
-                        <input type="radio" checked="checked" name="radio1" class="input_radio" id="radio6"/> <label for="radio6">ATM轉帳付款</label>
+                    <div class="delivery_option_OK option_hover delivery_options_OK">
+                        <input type="radio" checked="checked" name="radio1" class="input_radio" id="radio6" /> <label
+                            for="radio6">ATM轉帳付款</label>
                     </div>
-                    <div class="delivery_option_delivery option_hover">
-                        <input type="radio" checked="checked" name="radio1" class="input_radio" id="radio7"/> <label for="radio7">綠界</label>
+                    <div class="delivery_option_delivery option_hover delivery_options_delivery">
+                        <input type="radio" checked="checked" name="radio1" class="input_radio" id="radio7" /> <label
+                            for="radio7">綠界</label>
                     </div>
-                    <div class="delivery_option_storePickup option_hover">
-                        <input type="radio" checked="checked" name="radio1" class="input_radio" id="radio8"/> <label for="radio8">誠品點折扣</label>
+                    <div class="delivery_option_storePickup option_hover delivery_options_storePickup">
+                        <input type="radio" checked="checked" name="radio1" class="input_radio" id="radio8" /> <label
+                            for="radio8">誠品點折扣</label>
                     </div>
                 </div>
             </div>
