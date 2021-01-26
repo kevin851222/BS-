@@ -104,25 +104,35 @@
         .delivery_option_7-11 {
             margin: 0px 40px 10px 20px;
             background-color: #F4F4F4;
-            padding: 10px 0px 10px 20px;
+            padding: 10px 0px 0px 20px;
+        }
+
+        .option_hover label{
+            padding-right: 80px;
+            padding-bottom: 15px;
+            padding-top: 15px;
+        }
+
+        .option_hover:hover{
+            background-color: #8b8076;
         }
 
         .delivery_option_OK {
             margin: 0px 40px 10px 20px;
             background-color: #F4F4F4;
-            padding: 10px 0px 10px 20px;
+            padding: 10px 0px 0px 20px;
         }
 
         .delivery_option_delivery {
             margin: 0px 40px 10px 20px;
             background-color: #F4F4F4;
-            padding: 10px 0px 10px 20px;
+            padding: 10px 0px 0px 20px;
         }
 
         .delivery_option_storePickup {
             margin: 0px 40px 10px 20px;
             background-color: #F4F4F4;
-            padding: 10px 0px 10px 20px;
+            padding: 10px 0px 0px 20px;
         }
 
         .delivery_option_fee p {
@@ -140,9 +150,10 @@
             margin: 10px 0px 20px 61px;
         }
 
+
         .recipient_profile_phone {
             display: flex;
-            margin: 10px 0px 20px 30px;
+            margin: 0px 0px 20px 30px;
         }
 
         .recipient_profile_homePhone {
@@ -275,17 +286,17 @@
                     <div class="delivery_option_fee">
                         <p>超商取貨未滿350元，酌收訂單處理費50元</p>
                     </div>
-                    <div class="delivery_option_7-11">
-                        <input type="radio" checked="checked" name="radio" class="input_radio"> 台灣7-ELEVEN取貨
+                    <div class="delivery_option_7-11 option_hover">
+                        <input type="radio" checked="checked" name="radio" class="input_radio" id="radio1"/> <label for="radio1">台灣7-ELEVEN取貨</label>
                     </div>
-                    <div class="delivery_option_OK">
-                        <input type="radio" checked="checked" name="radio" class="input_radio"> 台灣全家/ OK /萊爾富取貨
+                    <div class="delivery_option_OK option_hover">
+                        <input type="radio" checked="checked" name="radio" class="input_radio" id="radio2"/> <label for="radio2">台灣全家/ OK /萊爾富取貨</label>
                     </div>
-                    <div class="delivery_option_delivery">
-                        <input type="radio" checked="checked" name="radio" class="input_radio"> 台灣-宅配(台灣地區)
+                    <div class="delivery_option_delivery option_hover">
+                        <input type="radio" checked="checked" name="radio" class="input_radio" id="radio3"/> <label for="radio3">台灣-宅配(台灣地區)</label>
                     </div>
-                    <div class="delivery_option_storePickup">
-                        <input type="radio" checked="checked" name="radio" class="input_radio"> 誠品門市取貨
+                    <div class="delivery_option_storePickup option_hover">
+                        <input type="radio" checked="checked" name="radio" class="input_radio" id="radio4"/> <label for="radio4">誠品門市取貨</label>
                     </div>
                 </div>
             </div>
@@ -349,17 +360,17 @@
                     </div>
                 </div>
                 <div class="payment_options_body">
-                    <div class="delivery_option_7-11">
-                        <input type="radio" checked="checked" name="radio" class="input_radio"> 台灣7-ELEVEN取貨付款
+                    <div class="delivery_option_7-11 option_hover">
+                        <input type="radio" checked="checked" name="radio1" class="input_radio" id="radio5"/> <label for="radio5"> 台灣7-ELEVEN取貨付款</label>
                     </div>
-                    <div class="delivery_option_OK">
-                        <input type="radio" checked="checked" name="radio" class="input_radio"> ATM轉帳付款
+                    <div class="delivery_option_OK option_hover">
+                        <input type="radio" checked="checked" name="radio1" class="input_radio" id="radio6"/> <label for="radio6">ATM轉帳付款</label>
                     </div>
-                    <div class="delivery_option_delivery">
-                        <input type="radio" checked="checked" name="radio" class="input_radio"> 綠界
+                    <div class="delivery_option_delivery option_hover">
+                        <input type="radio" checked="checked" name="radio1" class="input_radio" id="radio7"/> <label for="radio7">綠界</label>
                     </div>
-                    <div class="delivery_option_storePickup">
-                        <input type="radio" checked="checked" name="radio" class="input_radio"> 誠品點折扣
+                    <div class="delivery_option_storePickup option_hover">
+                        <input type="radio" checked="checked" name="radio1" class="input_radio" id="radio8"/> <label for="radio8">誠品點折扣</label>
                     </div>
                 </div>
             </div>
