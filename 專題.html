@@ -107,6 +107,7 @@
 
         .commodity_discount_txt {
             display: flex;
+            
         }
 
         .delivery_option {
@@ -459,10 +460,11 @@
 
             .commodity_discount {
                 display: flex;
+                padding-top: 5px;
             }
 
             .commodity_total {
-                margin-left: 200px;
+                margin-left: 100px;
             }
 
             .commodity {
@@ -473,6 +475,8 @@
 
             .cart_details {
                 margin-bottom: 20px;
+                padding-bottom: 50px;
+                
             }
 
             .cart_details_txt{
@@ -502,7 +506,9 @@
             }
 
             .cart_details_price{
-                margin: 60px 0px 0px 45px;
+                position: absolute;
+                top: 50px;
+                right: 380px;
             }
             
         
@@ -512,7 +518,29 @@
 
             .cart_details_total{
                 position: absolute;
-                top: 1px;
+                top: 170px;
+                right: 80px;
+            }
+
+            .cart_detail_quantity p{
+                position: absolute;
+                top: 110px;
+                right: 260px;
+            }
+
+            .cart_detail_quantity span{
+                position: absolute;
+                top: 110px;
+                right: 95px;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            .commodity_total {
+                margin-left: 270px;
+            }
+            .recipient_profile_select{
+                width: 300px;
             }
         }
     </style>
@@ -599,7 +627,7 @@
                     <div class="recipient_profile_phone">
                         <p>行動電話</p>
                         <div class="recipient_profile_name_select">
-                            <select>
+                            <select class="recipient_profile_select" style="width: 195px">
                                 <option>+886(台灣)</option>
                             </select>
                         </div>
