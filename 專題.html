@@ -289,11 +289,8 @@
         }
 
         .cart_details {
-            margin-bottom: 100px;
+            margin-bottom: 130px;
             background-color: #fff;
-        }
-
-        .cart_details {
             border: 1px solid rgb(175, 169, 169);
             margin-top: 25px;
         }
@@ -371,9 +368,11 @@
             color: #a82130;
         }
 
-        .recipient_profile_name_tel {
-            margin: -10px 0px 0px 105px;
+        .recipient_profile_name_tel{
+            margin: -10px 0px 0px 105px ;
         }
+
+
 
         @media screen and (max-width: 767px) {
             .commodity {
@@ -385,6 +384,10 @@
                 background-color: white;
                 padding: 10px 0px 0px 25px;
             }
+
+            .cart_details_none{
+            display: none;
+        }
         }
 
 
@@ -472,42 +475,45 @@
                 margin-bottom: 20px;
             }
 
-            .cart_details_txt {
+            .cart_details_txt{
                 width: 300px;
             }
 
-            .cart_details_Discount {
+            .cart_details_Discount{
                 position: absolute;
                 top: 15px;
                 right: 400px;
             }
-
-            .cart_details_quantity {
+            
+            .cart_details_quantity{
                 position: absolute;
                 top: 15px;
                 right: 250px;
             }
 
-            .cart_details_amount {
+            .cart_details_amount{
                 position: absolute;
                 top: 15px;
                 right: 100px;
             }
 
-            .cart_details_title {
+            .cart_details_title{
                 position: relative;
             }
 
-            .cart_details_price {
+            .cart_details_price{
                 margin: 60px 0px 0px 45px;
             }
-
-
-            .cart_details_body {
+            
+        
+            .cart_details{
                 position: relative;
             }
 
-            .cart_details_total {}
+            .cart_details_total{
+                position: absolute;
+                top: 1px;
+            }
         }
     </style>
 </head>
@@ -696,13 +702,13 @@
                     <div class="cart_details_title cart_titles">
                         <h2>商品資訊</h2>
                     </div>
-                    <div class="cart_details_Discount">
+                    <div class="cart_details_Discount  cart_details_none">
                         <p>優惠價</p>
                     </div>
-                    <div class="cart_details_quantity">
+                    <div class="cart_details_quantity cart_details_none">
                         <p>數量</p>
                     </div>
-                    <div class="cart_details_amount">
+                    <div class="cart_details_amount cart_details_none">
                         <p>總計</p>
                     </div>
                 </div>
