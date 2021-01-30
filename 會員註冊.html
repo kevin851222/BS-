@@ -12,11 +12,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d22f4b5afc.js" crossorigin="anonymous"></script>
     <style>
-        .container {
-            padding-top: 100px;
+        h1 {
+            padding-left: 130px;
+            padding-top: 50px;
         }
 
-        .card{
+        .container {
+            padding-top: 30px;
+        }
+
+        .card {
             padding: 20px;
         }
 
@@ -34,12 +39,12 @@
             display: flex;
         }
 
-        .radio_others input{
+        .radio_others input {
             margin-top: 5px;
             width: 20px;
         }
 
-        .radio_others label{
+        .radio_others label {
             width: 100px;
         }
 
@@ -47,69 +52,69 @@
             display: flex;
         }
 
-        .radio_taiwan input{
+        .radio_taiwan input {
             margin-top: 5px;
             width: 20px;
         }
 
-        .radio_taiwan label{
+        .radio_taiwan label {
             width: 100px;
         }
 
-        h1 {
+        .register span {
             font-size: 20px;
         }
 
-        .input{
+        .input {
             border-radius: 0.25rem;
         }
 
-        .input input{
+        .input input {
             height: 38px;
             border: 1px solid #CED4DA;
         }
 
-        .input input:focus{
-            outline:1px solid #92C2F6;
+        .input input:focus {
+            outline: 1px solid #92C2F6;
         }
 
-        input{
+        input {
             width: 100%;
         }
 
-        .valid_documents{
+        .valid_documents {
             padding-bottom: 4px;
         }
 
-        .valid_documents_input{
+        .valid_documents_input {
             padding-bottom: 8px;
         }
 
-        .birthday{
+        .birthday {
             padding-bottom: 4px;
         }
 
-        .birthday_input{
+        .birthday_input {
             padding-bottom: 8px;
         }
 
-        .password{
+        .password {
             padding-bottom: 4px;
         }
 
-        .password_input{
+        .password_input {
             padding-bottom: 8px;
         }
 
-        .password_input_confirm{
+        .password_input_confirm {
             padding-bottom: 8px;
         }
 
-        .btn_next{
+        .btn_next {
             padding-bottom: 8px;
         }
 
-        .btn_next input{
+        .btn_next input {
             background-color: #8A6927;
             border: none;
             color: white;
@@ -117,11 +122,11 @@
             height: 38px;
         }
 
-        .btn_reset{
+        .btn_reset {
             padding-bottom: 8px;
         }
 
-        .btn_reset input{
+        .btn_reset input {
             background-color: #F4F4F4;
             border: none;
             color: #666666;
@@ -129,14 +134,16 @@
             height: 38px;
         }
 
-        .protected p{
+        .protected p {
             font-size: 8px;
         }
     </style>
 </head>
 
 <body>
-
+    <div class="LOGO">
+        <h1>Libraria</h1>
+    </div>
     <div class="container">
         <div class="bread">
             <span>首頁</span>
@@ -145,7 +152,7 @@
         </div>
         <div class="card">
             <div class="register">
-                <h1>註冊</h1>
+                <span>註冊</span>
             </div>
             <div class="radio">
                 <div class="radio_taiwan">
@@ -159,7 +166,7 @@
                 <span>有效證件</span>
             </div>
             <div class="valid_documents_input input">
-                <input type="text" placeholder="  請輸入身分證字號" autofocus="autofocus" >
+                <input type="text" placeholder="  請輸入身分證字號" autofocus="autofocus">
             </div>
             <div class="birthday">
                 <span>西元生日</span>
@@ -183,7 +190,8 @@
                 <input type="submit" value="清除重填">
             </div>
             <div class="protected">
-                <p>This site is protected by reCAPTCHA and the Google <a href="">Privacy Policy</a> and <a href="">Terms of Service</a> apply.</p>
+                <p>This site is protected by reCAPTCHA and the Google <a href="">Privacy Policy</a> and <a href="">Terms
+                        of Service</a> apply.</p>
             </div>
         </div>
     </div>
@@ -195,36 +203,36 @@
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
 
-        <script>
-            let radio = document.querySelector("#radio")
-            let radio2 = document.querySelector("radio2")
-            let input = document.querySelector(".valid_documents_input")
-            let input2 = document.querySelector(".birthday_input")
-            let input3 = document.querySelector(".password_input")
-            let input4 = document.querySelector(".password_input_confirm")
+    <script>
+        let radio = document.querySelector("#radio")
+        let radio2 = document.querySelector("radio2")
+        let input = document.querySelector(".valid_documents_input")
+        let input2 = document.querySelector(".birthday_input")
+        let input3 = document.querySelector(".password_input")
+        let input4 = document.querySelector(".password_input_confirm")
 
 
-            let reset = document.querySelector(".btn_reset")
+        let reset = document.querySelector(".btn_reset")
 
-            window.onload = () => {
-                document.querySelector("#radio").addEventListener("click", click);
-                document.querySelector("#radio2").addEventListener("click", click2);
-                document.querySelector(".btn_reset").addEventListener("click", resets);
-            }
+        window.onload = () => {
+            document.querySelector("#radio").addEventListener("click", click);
+            document.querySelector("#radio2").addEventListener("click", click2);
+            document.querySelector(".btn_reset").addEventListener("click", resets);
+        }
 
-            function click(){
-                input.innerHTML = "<input type='text' placeholder='  請輸入身分證字號' autofocus='autofocus' >"
-            }
-            function click2(){
-                input.innerHTML = "<input type='text' placeholder='  請輸入護照或居留證號碼' autofocus='autofocus' >"
-            }
-            function resets(){
-                input.innerHTML = "<input type='text' placeholder='  請輸入身分證字號' autofocus='autofocus' >"
-                input2.innerHTML = "<input type='tel' placeholder='  請輸入生日(西元年月日，例:19931203)'>"
-                input3.innerHTML = "<input type='password' placeholder='  6~24個英數或數字半形字元'>"
-                input4.innerHTML = "<input type='password' placeholder='  確認密碼'>"
-            }
-        </script>
+        function click() {
+            input.innerHTML = "<input type='text' placeholder='  請輸入身分證字號' autofocus='autofocus' >"
+        }
+        function click2() {
+            input.innerHTML = "<input type='text' placeholder='  請輸入護照或居留證號碼' autofocus='autofocus' >"
+        }
+        function resets() {
+            input.innerHTML = "<input type='text' placeholder='  請輸入身分證字號' autofocus='autofocus' >"
+            input2.innerHTML = "<input type='tel' placeholder='  請輸入生日(西元年月日，例:19931203)'>"
+            input3.innerHTML = "<input type='password' placeholder='  6~24個英數或數字半形字元'>"
+            input4.innerHTML = "<input type='password' placeholder='  確認密碼'>"
+        }
+    </script>
 </body>
 
 
