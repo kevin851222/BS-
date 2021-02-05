@@ -10,10 +10,635 @@
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/order_checkout/order_checkout.css">
     <script src="https://kit.fontawesome.com/d22f4b5afc.js" crossorigin="anonymous"></script>
     <style>
+        body {
+            background-color: #f0e1b8;
+        }
 
+        .LOGO {
+            margin-left: 20px;
+        }
+
+        .container {
+            width: 100%;
+            padding-bottom: 20px;
+        }
+
+        .header {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        .header_step {
+            margin: auto;
+        }
+
+        .header_step_icon {
+            display: flex;
+            margin: 0px 20px 0px 10px;
+            margin-top: 20px;
+        }
+
+        .header_step_txt {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .header_step_txt p {
+            font-size: .9375rem;
+        }
+
+        .header_step_icon_num {
+            width: 1.6rem;
+            height: 1.6rem;
+            border-radius: 50%;
+            background-color: black;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .header_step_icon span {
+            color: white;
+            padding: 5px;
+            vertical-align: baseline;
+            font-size: 20px;
+        }
+
+        .header_step_line {
+            width: 100px;
+            margin: 0 .5rem;
+            border-top: 1px solid black;
+            position: relative;
+            top: 13px;
+        }
+
+        .num3 {
+            background-color: rgb(151, 148, 148);
+        }
+
+        .header_step_txt_words span {
+            color: rgb(151, 148, 148);
+        }
+
+        .header_step_txt_words h1 {
+            font-size: 15px;
+            padding-top: 5px;
+        }
+
+        h2 {
+            font-size: 18px;
+            padding: 5px 0px 5px 0px;
+        }
+
+        .cart_title {
+            padding: .5rem 1rem;
+        }
+
+        .step2 {
+            width: 100%;
+        }
+
+        .cart_titles {
+            border-bottom: 1px dashed black;
+        }
+
+        .commodity_discount_txt {
+            display: flex;
+
+        }
+
+        .delivery_option {
+            margin: auto;
+            border: 1px solid rgb(175, 169, 169);
+            background-color: white;
+        }
+
+        .delivery_option_fee {
+            margin: 0px 0px 20px 40px;
+        }
+
+        .delivery_option_fee p {
+            color: #536ABD;
+            font-size: 15px;
+        }
+
+        .delivery_options span {
+            padding-left: 0px;
+        }
+
+        .payment_optionss {
+            display: flex;
+        }
+
+        .payment_optionss span {
+            padding-left: 0px;
+        }
+
+        .recipient_profile {
+            border: 1px solid rgb(175, 169, 169);
+            margin-top: 25px;
+            background-color: white;
+        }
+
+        .recipient_profile_name {
+            display: flex;
+            margin: 10px 0px 20px 61px;
+        }
+
+
+        .recipient_profile_phone {
+            display: flex;
+            margin: 0px 0px 20px 30px;
+        }
+
+        .recipient_profile_homePhone {
+            display: flex;
+            margin: 10px 0px 20px 30px;
+        }
+
+        .recipient_profile_address {
+            display: flex;
+            margin: 10px 0px 5px 62px;
+        }
+
+        .recipient_profile_name p {
+            margin: 7px 10px 0px 0px;
+        }
+
+        .recipient_profile_phone p {
+            margin: 3px 10px 0px 0px;
+        }
+
+        .recipient_profile_homePhone p {
+            margin: 7px 10px 0px 0px;
+        }
+
+        .recipient_profile_address p {
+            margin: 3px 10px 0px 0px;
+        }
+
+        .recipient_profile_select select {
+            width: 89px;
+            height: 30px;
+        }
+
+        .subscriber_profile {
+            border: 1px solid rgb(175, 169, 169);
+            margin-top: 25px;
+            background-color: #FFF;
+            padding-bottom: 20px;
+        }
+
+        .subscriber_profile p {
+            margin-top: 7px;
+        }
+
+        .payment_options {
+            border: 1px solid rgb(175, 169, 169);
+            margin-top: 25px;
+            background-color: #fff;
+        }
+
+        .invoice_profile {
+            border: 1px solid rgb(175, 169, 169);
+            margin-top: 25px;
+            background-color: #fff;
+        }
+
+        .invoice_profile_txt {
+            padding: 10px 30px;
+        }
+
+        .invoice_profile_txt p {
+            color: #A82130;
+        }
+
+        .invoice_profile_select {
+            margin: 0px 0px 0px 50px;
+        }
+
+        .commodity_discount_txt span {
+            color: red
+        }
+
+        .commodity_total_txt {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .commodity_total_txt p {
+            margin-left: 50px;
+        }
+
+        .commodity_total_txt span {
+            margin: -15px 5px 0px 5px;
+            color: red;
+            font-size: 35px;
+        }
+
+        .commodity_total_txt button {
+            background-color: #a82130;
+            color: white;
+            margin-top: -10px;
+            margin-bottom: 5px;
+            width: 120px;
+            height: 40px;
+            border-radius: 4px;
+            border-color: #a82130;
+        }
+
+        .delivery_options_storePickup label {
+            padding-right: 100px;
+        }
+
+        .cart_details {
+            margin-bottom: 130px;
+            background-color: #fff;
+            border: 1px solid rgb(175, 169, 169);
+            margin-top: 25px;
+        }
+
+        .cart_details_body {
+            display: flex;
+        }
+
+        .cart_details_pic {
+            border: 1px solid #CCCCCC;
+            width: 110px;
+            height: 110px;
+            margin-left: 20px;
+            margin-top: 10px;
+            padding: 5px;
+        }
+
+        .cart_details_pic img {
+            width: 100%;
+        }
+
+        .cart_details_txt {
+            padding: 16px;
+            width: 144px;
+            vertical-align: baseline;
+            margin-left: 10px;
+        }
+
+        .cart_details_price {
+            width: 58px;
+            margin: 60px 0px 0px 15px;
+        }
+
+        .cart_details_txt p {
+            font-weight: 500;
+        }
+
+        .cart_detail_quantity {
+            display: flex;
+            border-bottom: 1px solid #EEEEEE;
+            margin: 0px 20px;
+        }
+
+        .cart_detail_quantity p {
+            margin-left: 50px;
+        }
+
+        .cart_detail_quantity span {
+            margin-left: 220px;
+            color: #a82130;
+        }
+
+        .cart_details_total {
+            display: flex;
+        }
+
+        .cart_details_total p {
+            margin: 15px 0px 10px 110px;
+        }
+
+        .cart_details_total span {
+            color: #a82130;
+            margin: 10px 0px 10px 80px;
+            font-weight: 700;
+            font-size: 1.4375rem;
+        }
+
+        .commodity_discount p,
+        span {
+            margin: 2px;
+        }
+
+
+        .recipient_profile_name_tel {
+            margin: -10px 0px 0px 105px;
+        }
+
+        .delivery_option_body {
+            padding: 0px 20px 10px;
+            box-sizing: border-box;
+        }
+
+        .delivery_options {
+            padding: 10px;
+            margin: 0px 0px 5px 0px;
+            background-color: #F4F4F4;
+            box-sizing: border-box;
+            border-right: 30px solid white;
+            border-left: 30px solid white;
+            display: flex;
+        }
+
+        .delivery_options span {
+            width: 8.33333%;
+        }
+
+        #option_txt {
+            width: 91.6666%;
+        }
+
+        .payment_optionss span {
+            width: 8.3333%;
+        }
+
+
+        .delivery_options:hover {
+            background-color: #6A625A;
+        }
+
+        .payment_options_body {
+            padding: 0px 20px 10px;
+            box-sizing: border-box;
+        }
+
+        .payment_optionss {
+            padding: 10px;
+            margin: 10px 0px 0px 0px;
+            background-color: #F4F4F4;
+            border-right: 30px solid white;
+            border-left: 30px solid white;
+            box-sizing: border-box;
+        }
+
+        .payment_optionss:hover {
+            background-color: #6A625A;
+        }
+
+        .recipient_profile_select {
+            width: 183px;
+            height: 40px;
+        }
+
+        .active_title {
+            padding-right: 10px;
+            padding-top: 3px;
+        }
+
+        .active_title_input {
+            display: flex;
+            padding: 10px 0px 0px 50px;
+        }
+
+        .active_txt {
+            padding: 0px 45px;
+        }
+
+        .active_txt p {
+            font-size: 13px;
+        }
+
+        .active_txt span {
+            color: blue;
+        }
+
+        #select {
+            height: 40px;
+        }
+
+        #recipient_input {
+            height: 40px;
+        }
+
+        .recipient_profile_address_txt {
+            padding: 0px 0px 15px 105px;
+        }
+
+        #recipient_option {
+            width: 89px;
+            height: 30px;
+        }
+
+        input {
+            height: 40px;
+        }
+
+
+        @media screen and (max-width: 767px) {
+            .commodity {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                box-shadow: 0 10px 10px 5px #000;
+                background-color: white;
+                padding: 10px 0px 0px 25px;
+            }
+
+            .cart_details_none {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 991px) {
+            .cart_details_none {
+                display: none;
+            }
+
+        }
+
+
+        @media screen and (min-width: 768px) {
+
+            .delivery_options_storePickup label {
+                padding-right: 70px;
+            }
+
+            .commodity {
+                background-color: white;
+                padding: 10px 0px 0px 25px;
+            }
+
+            .commodity_discount {
+                display: flex;
+                padding-top: 5px;
+                min-width: 450px;
+            }
+
+            .commodity_total {
+                margin-left: 370px;
+                min-width: 300px;
+            }
+
+            .commodity_total_txt p {
+                margin: 0px;
+            }
+
+            .commodity {
+                border: 1px solid rgb(175, 169, 169);
+                margin-top: 25px;
+                background-color: #FFF;
+            }
+
+            .cart_details {
+                margin-bottom: 20px;
+
+            }
+
+            .cart_details_txt {
+                width: 400px;
+            }
+
+            .delivery_option_body {
+                display: flex;
+            }
+
+            .payment_options_body {
+                display: flex;
+            }
+
+            .cart_details_price {
+                margin: 0px;
+                padding: 50px 0px 0px 40px;
+            }
+
+            .cart_detail_quantity {
+                margin: 0px;
+                padding: 0px 70px 10px 70px;
+                justify-content: space-between;
+            }
+
+            .cart_detail_quantity p {
+                margin: 0px;
+            }
+
+            .cart_details_total {
+                justify-content: space-between;
+                padding: 10px 150px 30px 250px;
+            }
+
+            .cart_details_total p {
+                margin: 5px 0px 0px 0px;
+            }
+
+            .cart_details_total span {
+                margin: 0px;
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            .cart_details_title {
+                display: flex;
+            }
+
+            .cart_details_txt {
+                width: 300px;
+            }
+
+            .commodity {
+                display: flex;
+            }
+
+            .commodity_total {
+                margin: 0px;
+                padding: 0px 0px 0px 150px;
+            }
+
+            .cart_details_total {
+                padding-left: 480px;
+            }
+
+            .cart_details_body_detail {
+                display: flex;
+            }
+
+            .cart_detail_quantity {
+                padding: 50px 50px 0px 150px;
+            }
+
+            .cart_detail_quantity span {
+                margin-left: 150px;
+            }
+
+            .cart_detail_title {
+                position: relative;
+            }
+
+            .cart_details_Discount {
+                position: absolute;
+                top: 10px;
+                right: 400px;
+            }
+
+            .cart_details_quantity {
+                position: absolute;
+                top: 10px;
+                right: 260px;
+            }
+
+            .cart_details_amount {
+                position: absolute;
+                top: 10px;
+                right: 90px;
+            }
+
+            .recipient_profile_phone_tel {
+                display: flex;
+            }
+
+            .recipient_profile_name_tel {
+                margin: 0px 0px 0px 10px;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            .commodity_total {
+                padding: 0px 0px 0px 340px;
+            }
+
+            .cart_details_total {
+                padding-left: 750px;
+            }
+
+            .cart_details_txt {
+                width: 400px;
+                padding-top: 20px;
+                padding-left: 40px;
+            }
+
+            .cart_details_price {
+                padding-left: 120px;
+            }
+
+
+            .cart_details_Discount {
+                position: absolute;
+                top: 10px;
+                right: 410px;
+            }
+
+            .cart_details_quantity {
+                position: absolute;
+                top: 10px;
+                right: 275px;
+            }
+
+            .cart_details_amount {
+                position: absolute;
+                top: 10px;
+                right: 105px;
+            }
+        }
     </style>
 </head>
 
@@ -335,7 +960,146 @@
         crossorigin="anonymous"></script>
 
     <script src="/order_checkout/order_checkout.js"></script>
+    <script>
+    let title = document.querySelector(".active_title")
+    let input = document.querySelector(".active_input")
+    let txt = document.querySelector(".active_txt")
+    let active = document.querySelector("#invoice_profile_active")
+    let _circle = document.querySelector(".circle")
+    let counties = document.querySelector(".recipient_option_counties")
+
+
+
+    window.onload = () => {
+    getAddressJSON()
+    findTown()
+    document.querySelector("#select").addEventListener("change", selectChange);
+    }
+
+    let select;
+    function selectChange() {
+    let select = document.querySelector("#select").value;
+
+    if (select == "1") {
+    title.innerHTML = "";
+    input.innerHTML = "";
+    txt.innerHTML = "";
+    }
+    if (select == "2") {
+    title.innerHTML = "<p>載具號碼</p>";
+    input.innerHTML = "<input placeholder='手機載具號碼'>";
+    txt.innerHTML = "<p>（限大寫英數字。使用電子發票，您需持有手機載具，詳見<span>財政部說明</span>。）</p>"
+    }
+    if (select == "3") {
+    title.innerHTML = "<p>憑證號碼</p>"
+    input.innerHTML = "<input placeholder='自然人憑證載具號碼'>"
+    txt.innerHTML = "<p>（使用自然人憑證電子發票，您需辦理自然人憑證，詳見<span>財政部說明</span>。）</p>"
+    }
+    if (select == "4") {
+    title.innerHTML = "";
+    input.innerHTML = "";
+    txt.innerHTML = "";
+    }
+    if (select == "5") {
+    title.innerHTML = "<p>統一編號</p>"
+    input.innerHTML = "<input placeholder='統一編號'>"
+    txt.innerHTML = "<p>※ 配合財政部新版電子發票格式，電子發票證明聯無抬頭欄位</p>"
+    }
+    if (select == "6") {
+    title.innerHTML = ""
+    input.innerHTML = ""
+    txt.innerHTML = "<p> 將發票捐贈給財團法人伊甸社會福利基金會 (依據法令規定，已捐贈的發票無法索回，如有退換貨需求，該張發票將予以作廢。)</p>"
+    }
+    }
+
+
+    let op7 = document.querySelector("#option_7-11")
+    let opOK = document.querySelector("#option_OK")
+    let opDe = document.querySelector("#option_delivery")
+    let opPick = document.querySelector("#option_pickup")
+    let _step2 = document.querySelector(".step2")
+    let deOP = document.querySelector(".delivery_option")
+    let _click = document.querySelectorAll(".circle")
+
+    let clicked = null;
+    let clicked2 = null;
+    _step2.querySelectorAll(".click_options").forEach((x) => {
+    x.addEventListener("click", function () {
+    let temp = clicked;
+    if (temp != null) {
+    let target = document.querySelector(`#${temp} .fa-dot-circle`);
+    target.classList.remove('fa-dot-circle');
+    target.classList.add('fa-circle');
+    }
+    // clicked.innerHTML = "<i class='far fa-circle'></i>"
+    let newTarget = document.querySelector(`#${x.id} .fa-circle`);
+    newTarget.classList.remove('fa-circle');
+    newTarget.classList.add('fa-dot-circle');
+    clicked = x.id;
+
+
+    // let temp = clicked;
+    // clicked.innerHTML = "<i class='far fa-dot-circle'></i>";
+
+    })
+    });
+    _step2.querySelectorAll(".click_options2").forEach((x) => {
+    x.addEventListener("click", function () {
+    let temp = clicked2;
+    if (temp != null) {
+    let target = document.querySelector(`#${temp} .fa-dot-circle`);
+    target.classList.remove('fa-dot-circle');
+    target.classList.add('fa-circle');
+    }
+    // clicked.innerHTML = "<i class='far fa-circle'></i>"
+    let newTarget = document.querySelector(`#${x.id} .fa-circle`);
+    newTarget.classList.remove('fa-circle');
+    newTarget.classList.add('fa-dot-circle');
+    clicked2 = x.id;
+
+
+    // let temp = clicked;
+    // clicked.innerHTML = "<i class='far fa-dot-circle'></i>";
+
+    })
+    });
+    /* <i class="far fa-dot-circle"></i> */
+    /* <i class="far fa-circle"></i> */
+
+
+    let url = "https://raw.githubusercontent.com/eric861129/BuildSchoolHW/main/TwArea.json";
+    let Town = document.getElementById("Town");
+    let taiwanAddress = [];
+    function getAddressJSON() {
+    let xhr = new XMLHttpRequest();
+    xhr.onload = function () {
+    taiwanAddress = JSON.parse(this.responseText);
+    }
+    xhr.open("GET", url);
+    xhr.send();
+    }
+
+    function findTown() {
+    Town.innerHTML = '<option selected>選取鄉政市區</option>';
+
+    _area = document.querySelector("#Region").value;
+    document.querySelector("#Town").disabled = null;
+    areaArray.forEach(x => {
+    if (x.Counties == _area) {
+    taiwanAddress = x.township;
+    CountiesLat = x.lat;
+    CountiesLng = x.lng;
+    townArray.forEach(item => {
+    let newOption = document.createElement('option');
+    texNode = document.createTextNode(item);
+    newOption.appendChild(texNode);
+    Town.appendChild(newOption);
+    });
+    }
+    });
+    }
+</script>
 </body>
 
 
-</htm
+</html>
